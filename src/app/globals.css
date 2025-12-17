@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  font-family: var(--font-alpino), sans-serif;
+}
+
+
+@layer base {
+  body {
+    font-family: var(--font-alpino), sans-serif;
+  }
+}
+
+@layer utilities {
+  @keyframes slide-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes spin-slow {
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-slide-left {
+    animation: slide-left 3s linear infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 6s linear infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+}
+
